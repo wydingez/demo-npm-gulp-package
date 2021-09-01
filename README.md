@@ -1,4 +1,4 @@
-## This is a test of npm package
+# This is a test of npm package
 
 ## build by gulp
 > plugins:
