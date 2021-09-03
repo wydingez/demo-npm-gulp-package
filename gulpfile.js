@@ -4,10 +4,11 @@ const pipeline = require('readable-stream').pipeline
 const babel = require('gulp-babel')
 const rename = require("gulp-rename")
 const clean = require('gulp-clean')
+const browserify = require('gulp-browserify')
 
 gulp.task('clean', function() {
   return pipeline(
-    gulp.src('./dist/*'),
+    gulp.src('./dist/gulp/*'),
     clean()
   )
 })
@@ -18,9 +19,12 @@ gulp.task('compress', function() {
     babel({
       presets: ['@babel/env']
     }),
+    browserify({
+      insertGlobals : true
+    }),
     uglify(),
     rename('dnp.min.js'),
-    gulp.dest('dist')
+    gulp.dest('dist/gulp')
   )
 })
 

@@ -1,11 +1,11 @@
-import packageInfo from './package-lock.json'
-import _ from 'lodash'
+// import packageInfo from './package.json'
+// import { get } from 'lodash'
 
 class DemoNpmPackage {
   constructor () {
-    const { name, version } = packageInfo
-    this.version = version
-    this.name = name
+    // const { name, version } = packageInfo
+    // this.version = version
+    // this.name = name
   }
 
   doAdd(a, b) {
@@ -20,9 +20,9 @@ class DemoNpmPackage {
     return Number(a) + Number(b)
   }
 
-  getPropByKey(obj, key) {
-    return _.get(obj, key)
-  }
+  // getPropByKey(obj, key) {
+  //   return get(obj, key)
+  // }
 }
 
 module.exports = DemoNpmPackage

@@ -1,4 +1,4 @@
-import packageInfo from './package-lock.json'
+import packageInfo from './package.json'
 import _ from 'lodash'
 
 class DemoNpmPackage {
@@ -10,11 +10,11 @@ class DemoNpmPackage {
 
   doAdd(a, b) {
     if (arguments.length !== 2) {
-      throw new Error('参数必须为两个')
+      throw new Error('参数必须为两个!')
     }
 
     if (Number.isNaN(a) || Number.isNaN(b)) {
-      throw new Error('参数必须为数字')
+      throw new Error('参数必须为数字!')
     }
 
     return Number(a) + Number(b)
@@ -22,6 +22,10 @@ class DemoNpmPackage {
 
   getPropByKey(obj, key) {
     return _.get(obj, key)
+  }
+
+  getDesc() {
+    return `${this.name}-${this.version}`
   }
 }
 
