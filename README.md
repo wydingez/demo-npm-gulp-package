@@ -1,6 +1,6 @@
 # This is a test of npm package
 
-## build by gulp
+### build by gulp
 > plugins:
 - gulp-uglify
 - readable-stream
